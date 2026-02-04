@@ -3,441 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website Workshop</title>
+    <title>Web Workshop</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">🚀 Web Workshop</div>
-            <ul class="nav-links">
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#step1">Setup</a></li>
-                <li><a href="#step2">Build</a></li>
-                <li><a href="#step3">GitHub</a></li>
-                <li><a href="#step4">Deploy</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <a href="#top" class="logo">workshop</a>
+        <div class="nav-links">
+            <a href="#setup">Setup</a>
+            <a href="#build">Build</a>
+            <a href="#github">GitHub</a>
+            <a href="#deploy">Deploy</a>
+        </div>
+    </nav>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Build & Deploy Your Personal Website</h1>
-                <p>From zero to live on the internet in under an hour</p>
-                <a href="#overview" class="btn">Let's Go!</a>
+        <header id="top">
+            <h1>Build your website.</h1>
+            <p>A step-by-step guide to creating and deploying a personal site.</p>
+        </header>
+
+        <section id="setup">
+            <div class="section-header">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 17l6-6-6-6M12 19h8"/>
+                </svg>
+                <h2>Setup</h2>
+            </div>
+
+            <div class="quick">
+                <span class="label">Quick version</span>
+                <p>Install <a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a>. Create a <a href="https://github.com" target="_blank" rel="noopener">GitHub</a> account. Create a <a href="https://cloudflare.com" target="_blank" rel="noopener">Cloudflare</a> account.</p>
+            </div>
+
+            <div class="detailed">
+                <h3>Node.js</h3>
+                <p>Node.js runs JavaScript on your computer. We use it to run the dev server and build tools.</p>
+                <pre><code>node --version</code></pre>
+                <p class="note">Run this after installing to verify it works. You should see v18 or higher.</p>
+
+                <h3>GitHub</h3>
+                <p>GitHub stores your code online and tracks changes. When you push code, Cloudflare automatically rebuilds your site.</p>
+
+                <h3>Cloudflare Pages</h3>
+                <p>Free hosting with HTTPS, global CDN, and automatic deployments. No configuration needed.</p>
             </div>
         </section>
 
-        <!-- Overview Section -->
-        <section id="overview" class="content-section">
-            <h2>📋 Workshop Overview</h2>
-            
-            <div class="tldr-box">
-                <h3>⚡ TL;DR</h3>
-                <p>Install Node.js → Clone repo → Customize → Push to GitHub → Connect Cloudflare → Live website!</p>
+        <section id="build">
+            <div class="section-header">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+                <h2>Build</h2>
             </div>
 
-            <div class="detail-box">
-                <h3>🔍 What We're Building</h3>
-                <p>By the end of this workshop, you'll have:</p>
-                <ul>
-                    <li>✅ A personal website with your own content</li>
-                    <li>✅ A GitHub repository with your code</li>
-                    <li>✅ A live site at <code>yourname.pages.dev</code></li>
-                    <li>✅ Automatic deployments when you push changes</li>
-                </ul>
-                
-                <h4>Tech Stack</h4>
-                <ul>
-                    <li><strong>HTML/CSS</strong> - Structure and styling</li>
-                    <li><strong>TypeScript</strong> - Interactive features</li>
-                    <li><strong>Vite</strong> - Fast build tool</li>
-                    <li><strong>GitHub</strong> - Code hosting</li>
-                    <li><strong>Cloudflare Pages</strong> - Free hosting with global CDN</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Step 1: Setup -->
-        <section id="step1" class="content-section alt-bg">
-            <h2>Step 1: Environment Setup</h2>
-            
-            <div class="tldr-box">
-                <h3>⚡ TL;DR</h3>
-                <ol>
-                    <li>Install Node.js from <a href="https://nodejs.org" target="_blank">nodejs.org</a></li>
-                    <li>Create accounts on <a href="https://github.com" target="_blank">GitHub</a> and <a href="https://cloudflare.com" target="_blank">Cloudflare</a></li>
-                    <li>Install VS Code (optional but recommended)</li>
-                </ol>
+            <div class="quick">
+                <span class="label">Quick version</span>
+                <pre><code>git clone https://github.com/Luki3532/testport.git my-site
+cd my-site
+npm install
+npm run dev</code></pre>
             </div>
 
-            <div class="detail-box">
-                <h3>🔍 In-Depth Explanation</h3>
-                
-                <h4>What is Node.js?</h4>
-                <p>Node.js is a JavaScript runtime that lets you run JavaScript outside the browser. We need it to:</p>
-                <ul>
-                    <li>Run the development server on your computer</li>
-                    <li>Use npm (Node Package Manager) to install tools</li>
-                    <li>Build the website for production</li>
-                </ul>
-                <div class="code-box">
-                    <p><strong>To verify installation, open terminal and run:</strong></p>
-                    <code>node --version</code>
-                    <p>You should see something like <code>v20.x.x</code></p>
-                </div>
+            <div class="detailed">
+                <h3>Clone the template</h3>
+                <p>This copies the project to your computer.</p>
+                <pre><code>git clone https://github.com/Luki3532/testport.git my-site</code></pre>
 
-                <h4>Why GitHub?</h4>
-                <p>GitHub is where your code lives online. It:</p>
-                <ul>
-                    <li>Backs up your code in the cloud</li>
-                    <li>Tracks every change you make (version control)</li>
-                    <li>Connects to Cloudflare for automatic deployments</li>
-                    <li>Lets others fork/copy your project</li>
-                </ul>
+                <h3>Install dependencies</h3>
+                <p>Downloads the build tools (Vite, TypeScript) into <code>node_modules</code>.</p>
+                <pre><code>cd my-site
+npm install</code></pre>
 
-                <h4>Why Cloudflare Pages?</h4>
-                <p>Cloudflare Pages hosts your website for free with enterprise-level features:</p>
-                <ul>
-                    <li>Global CDN (300+ locations worldwide)</li>
-                    <li>Automatic HTTPS/SSL</li>
-                    <li>Unlimited bandwidth</li>
-                    <li>Auto-deploys when you push to GitHub</li>
-                </ul>
-            </div>
-        </section>
+                <h3>Start the dev server</h3>
+                <p>Opens your site at <a href="http://localhost:3000" target="_blank" rel="noopener">localhost:3000</a> with live reload.</p>
+                <pre><code>npm run dev</code></pre>
 
-        <!-- Step 2: Build -->
-        <section id="step2" class="content-section">
-            <h2>Step 2: Build Your Website</h2>
-            
-            <div class="tldr-box">
-                <h3>⚡ TL;DR</h3>
-                <div class="code-box">
-                    <code>git clone https://github.com/Luki3532/testport.git my-website</code>
-                    <code>cd my-website</code>
-                    <code>npm install</code>
-                    <code>npm run dev</code>
-                </div>
-                <p>Then edit the files and see changes live at <code>http://localhost:3000</code></p>
-            </div>
-
-            <div class="detail-box">
-                <h3>🔍 In-Depth Explanation</h3>
-                
-                <h4>Cloning the Template</h4>
-                <p><code>git clone</code> downloads a copy of this project to your computer. You're not just downloading files—you're copying the entire project history.</p>
-                <div class="code-box">
-                    <code>git clone https://github.com/Luki3532/testport.git my-website</code>
-                </div>
-                <p>This creates a folder called <code>my-website</code> with all the project files.</p>
-
-                <h4>Installing Dependencies</h4>
-                <p><code>npm install</code> reads <code>package.json</code> and downloads all required tools (Vite, TypeScript) into a <code>node_modules</code> folder.</p>
-                <div class="code-box">
-                    <code>npm install</code>
-                </div>
-                <p>This might take a minute. You only need to do this once.</p>
-
-                <h4>Starting the Dev Server</h4>
-                <p><code>npm run dev</code> starts Vite's development server with hot reload—when you save a file, the browser updates instantly.</p>
-                <div class="code-box">
-                    <code>npm run dev</code>
-                </div>
-
-                <h4>Project Structure</h4>
-                <div class="file-tree">
-                    <pre>
-my-website/
-├── index.html      ← Main HTML (edit content here)
-├── styles.css      ← All styling (colors, layout)
-├── script.ts       ← TypeScript (interactivity)
-├── package.json    ← Project config & dependencies
-├── vite.config.ts  ← Vite settings
-└── tsconfig.json   ← TypeScript settings
-                    </pre>
-                </div>
-
-                <h4>Customizing Your Site</h4>
-                <table class="info-table">
-                    <tr>
-                        <th>To Change...</th>
-                        <th>Edit This File</th>
-                    </tr>
-                    <tr>
-                        <td>Text, headings, sections</td>
-                        <td><code>index.html</code></td>
-                    </tr>
-                    <tr>
-                        <td>Colors, fonts, spacing</td>
-                        <td><code>styles.css</code></td>
-                    </tr>
-                    <tr>
-                        <td>Animations, form behavior</td>
-                        <td><code>script.ts</code></td>
-                    </tr>
+                <h3>Project files</h3>
+                <table>
+                    <tr><td><code>index.html</code></td><td>Content and structure</td></tr>
+                    <tr><td><code>styles.css</code></td><td>Colors, layout, typography</td></tr>
+                    <tr><td><code>script.ts</code></td><td>Interactivity</td></tr>
                 </table>
             </div>
         </section>
 
-        <!-- Step 3: GitHub -->
-        <section id="step3" class="content-section alt-bg">
-            <h2>Step 3: Push to GitHub</h2>
-            
-            <div class="tldr-box">
-                <h3>⚡ TL;DR</h3>
+        <section id="github">
+            <div class="section-header">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                    <path d="M9 18c-4.51 2-5-2-7-2"/>
+                </svg>
+                <h2>GitHub</h2>
+            </div>
+
+            <div class="quick">
+                <span class="label">Quick version</span>
+                <p>Create a repo at <a href="https://github.com/new" target="_blank" rel="noopener">github.com/new</a>, then:</p>
+                <pre><code>git remote set-url origin https://github.com/YOU/YOUR-REPO.git
+git add .
+git commit -m "Initial commit"
+git push -u origin main</code></pre>
+            </div>
+
+            <div class="detailed">
+                <h3>Create a repository</h3>
                 <ol>
-                    <li>Create a new repo on GitHub (don't initialize with README)</li>
-                    <li>Run these commands:</li>
+                    <li>Go to <a href="https://github.com/new" target="_blank" rel="noopener">github.com/new</a></li>
+                    <li>Name it (e.g., <code>my-site</code>)</li>
+                    <li>Leave "Add a README" unchecked</li>
+                    <li>Click Create repository</li>
                 </ol>
-                <div class="code-box">
-                    <code>git remote set-url origin https://github.com/YOUR_USERNAME/YOUR_REPO.git</code>
-                    <code>git add .</code>
-                    <code>git commit -m "My personal website"</code>
-                    <code>git push -u origin main</code>
-                </div>
+
+                <h3>Connect your local project</h3>
+                <p>Point your project to your new repo instead of the template.</p>
+                <pre><code>git remote set-url origin https://github.com/YOU/YOUR-REPO.git</code></pre>
+
+                <h3>Push your code</h3>
+                <pre><code>git add .
+git commit -m "Initial commit"
+git push -u origin main</code></pre>
+
+                <h3>Future updates</h3>
+                <p>After making changes:</p>
+                <pre><code>git add .
+git commit -m "Describe what changed"
+git push</code></pre>
+            </div>
+        </section>
+
+        <section id="deploy">
+            <div class="section-header">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
+                <h2>Deploy</h2>
             </div>
 
-            <div class="detail-box">
-                <h3>🔍 In-Depth Explanation</h3>
-                
-                <h4>Creating Your GitHub Repository</h4>
+            <div class="quick">
+                <span class="label">Quick version</span>
+                <p><a href="https://dash.cloudflare.com" target="_blank" rel="noopener">Cloudflare Dashboard</a> → Workers & Pages → Create → Pages → Connect to Git → Select repo → Build command: <code>npm run build</code> → Output: <code>dist</code> → Deploy</p>
+            </div>
+
+            <div class="detailed">
+                <h3>Connect Cloudflare to GitHub</h3>
                 <ol>
-                    <li>Go to <a href="https://github.com/new" target="_blank">github.com/new</a></li>
-                    <li>Name it something like <code>my-website</code> or <code>portfolio</code></li>
-                    <li><strong>Important:</strong> Do NOT check "Add a README" - we already have files</li>
-                    <li>Click "Create repository"</li>
+                    <li>Open <a href="https://dash.cloudflare.com" target="_blank" rel="noopener">dash.cloudflare.com</a></li>
+                    <li>Go to Workers & Pages</li>
+                    <li>Click Create → Pages → Connect to Git</li>
+                    <li>Authorize GitHub access</li>
+                    <li>Select your repository</li>
                 </ol>
 
-                <h4>Understanding Git Commands</h4>
-                
-                <div class="command-explain">
-                    <h5><code>git remote set-url origin [URL]</code></h5>
-                    <p>Changes where your code will be pushed. The cloned repo points to the template—this redirects it to YOUR repo.</p>
-                </div>
+                <h3>Build settings</h3>
+                <table>
+                    <tr><td>Build command</td><td><code>npm run build</code></td></tr>
+                    <tr><td>Output directory</td><td><code>dist</code></td></tr>
+                </table>
 
-                <div class="command-explain">
-                    <h5><code>git add .</code></h5>
-                    <p>Stages all changed files. The <code>.</code> means "everything in this folder." Git now knows which files to include in the next commit.</p>
+                <h3>How it works</h3>
+                <div class="flow">
+                    <div class="flow-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                        <span>Push to GitHub</span>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
+                        <span>Cloudflare builds</span>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        <span>Site goes live</span>
+                    </div>
                 </div>
-
-                <div class="command-explain">
-                    <h5><code>git commit -m "message"</code></h5>
-                    <p>Creates a snapshot of your staged files with a description. Think of it as a save point you can return to.</p>
-                </div>
-
-                <div class="command-explain">
-                    <h5><code>git push -u origin main</code></h5>
-                    <p>Uploads your commits to GitHub. <code>-u origin main</code> sets this as the default, so next time you can just type <code>git push</code>.</p>
-                </div>
-
-                <h4>Future Changes</h4>
-                <p>After the initial setup, updating your site is just:</p>
-                <div class="code-box">
-                    <code>git add .</code>
-                    <code>git commit -m "Updated about section"</code>
-                    <code>git push</code>
-                </div>
+                <p class="note">Your site will be at <code>your-project.pages.dev</code></p>
             </div>
         </section>
 
-        <!-- Step 4: Deploy -->
-        <section id="step4" class="content-section">
-            <h2>Step 4: Deploy to Cloudflare</h2>
-            
-            <div class="tldr-box">
-                <h3>⚡ TL;DR</h3>
-                <ol>
-                    <li>Go to <a href="https://dash.cloudflare.com" target="_blank">Cloudflare Dashboard</a></li>
-                    <li>Workers & Pages → Create → Pages → Connect to Git</li>
-                    <li>Select your repo</li>
-                    <li>Build command: <code>npm run build</code></li>
-                    <li>Output directory: <code>dist</code></li>
-                    <li>Deploy! ✨</li>
-                </ol>
+        <section id="help">
+            <div class="section-header">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/>
+                </svg>
+                <h2>Troubleshooting</h2>
             </div>
 
-            <div class="detail-box">
-                <h3>🔍 In-Depth Explanation</h3>
-                
-                <h4>Connecting to Cloudflare Pages</h4>
-                <ol class="numbered-steps">
-                    <li>
-                        <strong>Open Cloudflare Dashboard</strong>
-                        <p>Go to <a href="https://dash.cloudflare.com" target="_blank">dash.cloudflare.com</a> and log in</p>
-                    </li>
-                    <li>
-                        <strong>Navigate to Pages</strong>
-                        <p>In the sidebar, click "Workers & Pages"</p>
-                    </li>
-                    <li>
-                        <strong>Create New Project</strong>
-                        <p>Click "Create" → "Pages" → "Connect to Git"</p>
-                    </li>
-                    <li>
-                        <strong>Authorize GitHub</strong>
-                        <p>First time? You'll need to authorize Cloudflare to access your GitHub repos</p>
-                    </li>
-                    <li>
-                        <strong>Select Your Repository</strong>
-                        <p>Find and click on your website repo</p>
-                    </li>
-                    <li>
-                        <strong>Configure Build Settings</strong>
-                        <table class="info-table">
-                            <tr>
-                                <th>Setting</th>
-                                <th>Value</th>
-                            </tr>
-                            <tr>
-                                <td>Production branch</td>
-                                <td><code>main</code></td>
-                            </tr>
-                            <tr>
-                                <td>Build command</td>
-                                <td><code>npm run build</code></td>
-                            </tr>
-                            <tr>
-                                <td>Build output directory</td>
-                                <td><code>dist</code></td>
-                            </tr>
-                        </table>
-                    </li>
-                    <li>
-                        <strong>Deploy!</strong>
-                        <p>Click "Save and Deploy" - takes about 30-60 seconds</p>
-                    </li>
-                </ol>
+            <div class="detailed">
+                <h3>"npm not found"</h3>
+                <p>Node.js isn't installed. Download from <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> and restart your terminal.</p>
 
-                <h4>How It Works Behind the Scenes</h4>
-                <div class="flow-diagram">
-                    <div class="flow-step">
-                        <div class="flow-icon">📝</div>
-                        <p>You push code to GitHub</p>
-                    </div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-step">
-                        <div class="flow-icon">🔔</div>
-                        <p>GitHub notifies Cloudflare</p>
-                    </div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-step">
-                        <div class="flow-icon">🔨</div>
-                        <p>Cloudflare runs <code>npm run build</code></p>
-                    </div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-step">
-                        <div class="flow-icon">🌍</div>
-                        <p>Files distributed to 300+ servers</p>
-                    </div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-step">
-                        <div class="flow-icon">✨</div>
-                        <p>Site is live!</p>
-                    </div>
-                </div>
+                <h3>"git not found"</h3>
+                <p>Install Git from <a href="https://git-scm.com" target="_blank" rel="noopener">git-scm.com</a></p>
 
-                <h4>What <code>npm run build</code> Does</h4>
-                <ul>
-                    <li>Compiles TypeScript → JavaScript</li>
-                    <li>Minifies code (removes whitespace, shortens names)</li>
-                    <li>Optimizes assets for fast loading</li>
-                    <li>Outputs everything to <code>dist/</code> folder</li>
-                </ul>
+                <h3>Build fails on Cloudflare</h3>
+                <p>Check build logs. Usually it's a wrong build command or output directory.</p>
 
-                <h4>Your Live Site</h4>
-                <p>After deployment, your site will be available at:</p>
-                <div class="code-box">
-                    <code>https://your-project-name.pages.dev</code>
-                </div>
-                <p>You can also add a custom domain later in the Cloudflare dashboard!</p>
+                <h3>Changes not showing</h3>
+                <p>Make sure you pushed: <code>git add . && git commit -m "update" && git push</code></p>
             </div>
-        </section>
-
-        <!-- Troubleshooting -->
-        <section id="troubleshooting" class="content-section alt-bg">
-            <h2>🔧 Troubleshooting</h2>
-            
-            <div class="detail-box">
-                <div class="trouble-item">
-                    <h4>❌ "npm not found"</h4>
-                    <p><strong>Fix:</strong> Node.js isn't installed or not in PATH. Reinstall from <a href="https://nodejs.org" target="_blank">nodejs.org</a> and restart your terminal.</p>
-                </div>
-
-                <div class="trouble-item">
-                    <h4>❌ "git not found"</h4>
-                    <p><strong>Fix:</strong> Install Git from <a href="https://git-scm.com" target="_blank">git-scm.com</a></p>
-                </div>
-
-                <div class="trouble-item">
-                    <h4>❌ Build fails on Cloudflare</h4>
-                    <p><strong>Fix:</strong> Check build logs in Cloudflare dashboard. Common issues:</p>
-                    <ul>
-                        <li>Wrong build command (should be <code>npm run build</code>)</li>
-                        <li>Wrong output directory (should be <code>dist</code>)</li>
-                        <li>Missing <code>package.json</code></li>
-                    </ul>
-                </div>
-
-                <div class="trouble-item">
-                    <h4>❌ Changes not showing on live site</h4>
-                    <p><strong>Fix:</strong> Make sure you committed AND pushed:</p>
-                    <div class="code-box">
-                        <code>git add .</code>
-                        <code>git commit -m "my changes"</code>
-                        <code>git push</code>
-                    </div>
-                </div>
-
-                <div class="trouble-item">
-                    <h4>❌ Port 3000 already in use</h4>
-                    <p><strong>Fix:</strong> Another process is using port 3000. Either close it or run Vite on a different port:</p>
-                    <div class="code-box">
-                        <code>npm run dev -- --port 3001</code>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Next Steps -->
-        <section id="next-steps" class="content-section">
-            <h2>🎯 What's Next?</h2>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>Customize Design</h3>
-                    <p>Change colors in <code>styles.css</code>, try different fonts from Google Fonts</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌐</div>
-                    <h3>Custom Domain</h3>
-                    <p>Connect your own domain in Cloudflare Pages settings</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📝</div>
-                    <h3>Add a Blog</h3>
-                    <p>Create new HTML pages and link them together</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>Analytics</h3>
-                    <p>Add Cloudflare Web Analytics (free) to track visitors</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact">
-            <h2>Questions?</h2>
-            <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem;">
-                Raise your hand or ask the workshop facilitator!
-            </p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Personal Website Workshop. Happy coding! 🚀</p>
+        <p>Questions? Ask the workshop facilitator.</p>
     </footer>
 
     <script type="module" src="/script.ts"></script>
