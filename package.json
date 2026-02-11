@@ -1,7 +1,7 @@
 {
-  "name": "testport",
+  "name": "web-workshop-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "A starter template for building and deploying personal websites",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Luki3532/testport.git"
+    "url": "git+https://github.com/Luki3532/web-workshop-starter.git"
   },
-  "keywords": [],
+  "keywords": ["portfolio", "personal-website", "workshop", "vite", "typescript"],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/Luki3532/testport/issues"
+    "url": "https://github.com/Luki3532/web-workshop-starter/issues"
   },
-  "homepage": "https://github.com/Luki3532/testport#readme",
+  "homepage": "https://github.com/Luki3532/web-workshop-starter#readme",
   "devDependencies": {
     "typescript": "^5.9.3",
     "vite": "^7.3.1"
