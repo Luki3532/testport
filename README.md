@@ -1,101 +1,68 @@
-# Personal Website Workshop 🚀
+﻿# Web Workshop Starter
 
-Build and deploy your own personal website in under an hour!
+Build and deploy your personal website in under 30 minutes. No programming experience needed!
 
-## Prerequisites
+## What You'll Get
 
-- [Node.js](https://nodejs.org/) (v18 or higher)
-- A [GitHub](https://github.com) account
-- A [Cloudflare](https://cloudflare.com) account (free)
+A professional personal website with:
+- About section
+- Skills list  
+- Project showcase
+- Contact links
+- Mobile-friendly design
 
-## Getting Started
+## Quick Start
 
-### 1. Clone this repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
-```
-
-### 2. Install dependencies
+**See [QUICKSTART.md](QUICKSTART.md) for the full tutorial.**
 
 ```bash
+# 1. Clone this project
+git clone https://github.com/Luki3532/web-workshop-starter.git my-website
+cd my-website
+
+# 2. Install tools
 npm install
-```
 
-### 3. Start the development server
-
-```bash
+# 3. Start editing
 npm run dev
 ```
 
-Your site will open at `http://localhost:3000`
+Then:
+1. Rename `starter.html` to `index.html`
+2. Rename `starter.css` to `styles.css`
+3. Edit your information in `index.html`
+4. Change colors in `styles.css`
 
-## Customizing Your Site
+## Files Overview
 
-### Edit the content
-- Open `index.html` and update the text, sections, and content
-- Modify `styles.css` to change colors and styling
-- Edit `script.ts` to add interactivity
+| File | What It Does | Edit This? |
+|------|--------------|------------|
+| `starter.html` | Your website content | Yes - rename to index.html |
+| `starter.css` | Your website styling | Yes - rename to styles.css |
+| `index.html` | Tutorial/demo page | Replace with starter.html |
+| `styles.css` | Tutorial styling | Replace with starter.css |
+| `templates/` | Alternative layouts | Optional |
 
-### Key customizations:
-1. **Logo & Name**: Change "MyWebsite" to your name in the header
-2. **Hero Section**: Update the headline and tagline
-3. **About Section**: Write about yourself
-4. **Services/Skills**: Showcase what you do
-5. **Contact**: Update or connect to a form service
+## Deploy to Cloudflare
 
-## Deploying to Cloudflare Pages
+1. Push your code to GitHub
+2. Go to [Cloudflare Pages](https://pages.cloudflare.com)
+3. Connect your repository
+4. Set build command: `npm run build`
+5. Set output directory: `dist`
+6. Deploy!
 
-### 1. Push to GitHub
-```bash
-git add .
-git commit -m "My personal website"
-git push origin main
-```
+Your site will be live at `yourname.pages.dev`
 
-### 2. Connect to Cloudflare Pages
-1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com)
-2. Navigate to **Workers & Pages** → **Create application** → **Pages**
-3. Click **Connect to Git**
-4. Select your GitHub repository
-5. Configure build settings:
-   - **Build command**: `npm run build`
-   - **Build output directory**: `dist`
-6. Click **Save and Deploy**
+## Helpful Resources
 
-Your site will be live at `https://your-project.pages.dev` in minutes!
-
-## Project Structure
-
-```
-├── index.html      # Main HTML file
-├── styles.css      # Stylesheet
-├── script.ts       # TypeScript for interactivity
-├── vite.config.ts  # Vite configuration
-├── tsconfig.json   # TypeScript configuration
-└── package.json    # Dependencies and scripts
-```
-
-## Available Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-
-## Tips for Participants
-
-- 🎨 Use [coolors.co](https://coolors.co) to generate color palettes
-- 🖼️ Get free images from [unsplash.com](https://unsplash.com)
-- 🔤 Try different fonts from [Google Fonts](https://fonts.google.com)
-- ✨ Add icons from [heroicons.com](https://heroicons.com)
+- [Color picker](https://coolors.co) - Find nice color combinations
+- [Free photos](https://unsplash.com) - Stock images
+- [Google Fonts](https://fonts.google.com) - Free fonts
+- [Heroicons](https://heroicons.com) - Free icons
 
 ## Need Help?
 
-Raise your hand or ask the workshop facilitator!
-
----
-
-Made with ❤️ at Personal Website Workshop
+- Check [QUICKSTART.md](QUICKSTART.md) for step-by-step instructions
+- Look at the comments in `starter.html` 
+- Ask your workshop facilitator!

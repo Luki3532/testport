@@ -1,0 +1,248 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   STARTER.CSS - Beginner-Friendly Stylesheet
+   
+   HOW TO USE THIS FILE:
+   1. Change the colors in the COLORS section below
+   2. Everything else will update automatically!
+   
+   TIP: Colors use "hex codes" like #3b82f6 (blue). 
+   Find colors at: https://coolors.co or https://htmlcolorcodes.com
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   COLORS - Change these to customize your site!
+   ───────────────────────────────────────────────────────────────────────────── */
+:root {
+    --main-color: #3b82f6;      /* Primary color (links, buttons) - try: #10b981 (green), #8b5cf6 (purple) */
+    --text-color: #1f2937;      /* Main text color (dark gray) */
+    --text-light: #6b7280;      /* Lighter text for subtitles */
+    --background: #ffffff;      /* Page background (white) */
+    --background-alt: #f3f4f6;  /* Alternate background for sections */
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   BASIC SETUP (you don't need to change this)
+   ───────────────────────────────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;  /* Smooth scrolling when clicking nav links */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background);
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   LINKS
+   ───────────────────────────────────────────────────────────────────────────── */
+a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   NAVIGATION BAR (the menu at the top)
+   ───────────────────────────────────────────────────────────────────────────── */
+nav {
+    position: fixed;           /* Stays at top when scrolling */
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 2rem;
+    background: var(--background);
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   HERO SECTION (the big intro area)
+   ───────────────────────────────────────────────────────────────────────────── */
+.hero {
+    padding: 8rem 2rem 4rem;   /* Extra top padding for the fixed nav */
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SECTIONS (About, Skills, Projects, Contact)
+   ───────────────────────────────────────────────────────────────────────────── */
+section {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Alternate background colors for visual separation */
+#skills, #contact {
+    background: var(--background-alt);
+    max-width: 100%;
+    padding-left: calc((100% - 800px) / 2 + 2rem);
+    padding-right: calc((100% - 800px) / 2 + 2rem);
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+section p {
+    margin-bottom: 1rem;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SKILLS LIST
+   ───────────────────────────────────────────────────────────────────────────── */
+#skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+#skills li {
+    background: var(--background);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;     /* Makes them pill-shaped */
+    font-size: 0.95rem;
+    border: 1px solid #e5e7eb;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   PROJECT CARDS
+   ───────────────────────────────────────────────────────────────────────────── */
+.project {
+    background: var(--background-alt);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.project h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.project p {
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+}
+
+.project a {
+    font-weight: 500;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   CONTACT LINKS
+   ───────────────────────────────────────────────────────────────────────────── */
+.contact-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contact-links a {
+    font-weight: 500;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FOOTER
+   ───────────────────────────────────────────────────────────────────────────── */
+footer {
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   MOBILE RESPONSIVE (makes it look good on phones)
+   ───────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    section h2 {
+        font-size: 1.5rem;
+    }
+    
+    #skills, #contact {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
