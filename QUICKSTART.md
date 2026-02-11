@@ -42,23 +42,7 @@ Just double-click `index.html` to open it in your browser!
 
 ---
 
-## Step 3: Change Colors (Optional)
-
-Open `styles.css` and change the color at the top:
-
-```css
---main-color: #3b82f6;
-```
-
-Try these:
-- `#10b981` - Green
-- `#8b5cf6` - Purple
-- `#f59e0b` - Orange
-- `#ef4444` - Red
-
----
-
-## Step 4: Publish Online (10 minutes)
+## Step 3: Publish Online (10 minutes)
 
 ### Create accounts (both free):
 1. **GitHub** - [github.com/signup](https://github.com/signup)
@@ -79,7 +63,7 @@ Try these:
 
 ---
 
-##  Done!
+## Done!
 
 Your site is live at: `https://your-project.pages.dev`
 

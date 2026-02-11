@@ -4,9 +4,6 @@
    HOW TO USE THIS FILE:
    1. Change the colors in the COLORS section below
    2. Everything else will update automatically!
-   
-   TIP: Colors use "hex codes" like #3b82f6 (blue). 
-   Find colors at: https://coolors.co or https://htmlcolorcodes.com
    ═══════════════════════════════════════════════════════════════════════════ */
 
 
@@ -14,7 +11,7 @@
    COLORS - Change these to customize your site!
    ───────────────────────────────────────────────────────────────────────────── */
 :root {
-    --main-color: #3b82f6;      /* Primary color (links, buttons) - try: #10b981 (green), #8b5cf6 (purple) */
+    --main-color: #3b82f6;      /* Primary color (links, buttons) */
     --text-color: #1f2937;      /* Main text color (dark gray) */
     --text-light: #6b7280;      /* Lighter text for subtitles */
     --background: #ffffff;      /* Page background (white) */

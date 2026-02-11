@@ -31,7 +31,6 @@ Then:
 1. Rename `starter.html` to `index.html`
 2. Rename `starter.css` to `styles.css`
 3. Edit your information in `index.html`
-4. Change colors in `styles.css`
 
 ## Files Overview
 
@@ -56,7 +55,6 @@ Your site will be live at `yourname.pages.dev`
 
 ## Helpful Resources
 
-- [Color picker](https://coolors.co) - Find nice color combinations
 - [Free photos](https://unsplash.com) - Stock images
 - [Google Fonts](https://fonts.google.com) - Free fonts
 - [Heroicons](https://heroicons.com) - Free icons
