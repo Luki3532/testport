@@ -15,7 +15,6 @@
   "keywords": ["portfolio", "personal-website", "workshop", "vite", "typescript"],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Luki3532/web-workshop-starter/issues"
   },
