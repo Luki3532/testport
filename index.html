@@ -3,238 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Workshop</title>
+    <title>Build Your Website - Workshop</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
         <a href="#top" class="logo">workshop</a>
         <div class="nav-links">
-            <a href="#setup">Setup</a>
-            <a href="#build">Build</a>
-            <a href="#github">GitHub</a>
-            <a href="#deploy">Deploy</a>
+            <a href="#step1">Download</a>
+            <a href="#step2">Edit</a>
+            <a href="#step3">Publish</a>
         </div>
     </nav>
 
     <main>
         <header id="top">
             <h1>Build your website.</h1>
-            <p>A step-by-step guide to creating and deploying a personal site.</p>
+            <p>No coding experience needed. Just 3 easy steps.</p>
         </header>
 
-        <section id="setup">
+        <!-- ============================================
+             STEP 1: DOWNLOAD
+             ============================================ -->
+        <section id="step1">
             <div class="section-header">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 17l6-6-6-6M12 19h8"/>
-                </svg>
-                <h2>Setup</h2>
+                <span class="step-number">1</span>
+                <h2>Download the Template</h2>
             </div>
 
-            <div class="quick">
-                <span class="label">Quick version</span>
-                <p>Install <a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a>. Create a <a href="https://github.com" target="_blank" rel="noopener">GitHub</a> account. Create a <a href="https://cloudflare.com" target="_blank" rel="noopener">Cloudflare</a> account.</p>
+            <div class="step-content">
+                <div class="action-box">
+                    <h3>Click this button to download:</h3>
+                    <a href="https://github.com/Luki3532/web-workshop-starter/archive/refs/heads/main.zip" class="big-button" download>
+                        ⬇️ Download ZIP File
+                    </a>
+                </div>
+
+                <div class="instructions">
+                    <h3>Then:</h3>
+                    <ol class="big-steps">
+                        <li>
+                            <strong>Find the downloaded file</strong>
+                            <p>Look in your Downloads folder for <code>web-workshop-starter-main.zip</code></p>
+                        </li>
+                        <li>
+                            <strong>Unzip it</strong>
+                            <p>Double-click the ZIP file to extract it (or right-click → "Extract All" on Windows)</p>
+                        </li>
+                        <li>
+                            <strong>Open the folder</strong>
+                            <p>You should see files like <code>starter.html</code>, <code>starter.css</code>, etc.</p>
+                        </li>
+                    </ol>
+                </div>
             </div>
 
-            <div class="detailed">
-                <h3>Node.js</h3>
-                <p>Node.js runs JavaScript on your computer. We use it to run the dev server and build tools.</p>
-                <pre><code>node --version</code></pre>
-                <p class="note">Run this after installing to verify it works. You should see v18 or higher.</p>
-
-                <h3>GitHub</h3>
-                <p>GitHub stores your code online and tracks changes. When you push code, Cloudflare automatically rebuilds your site.</p>
-
-                <h3>Cloudflare Pages</h3>
-                <p>Free hosting with HTTPS, global CDN, and automatic deployments. No configuration needed.</p>
-            </div>
-        </section>
-
-        <section id="build">
-            <div class="section-header">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                </svg>
-                <h2>Build</h2>
-            </div>
-
-            <div class="quick">
-                <span class="label">Quick version</span>
-                <pre><code>git clone https://github.com/Luki3532/web-workshop-starter.git my-site
+            <details class="advanced">
+                <summary>🔧 Advanced: Use Terminal Instead</summary>
+                <div class="advanced-content">
+                    <p>If you have Git and Node.js installed, you can use the terminal:</p>
+                    <pre><code>git clone https://github.com/Luki3532/web-workshop-starter.git my-site
 cd my-site
 npm install
 npm run dev</code></pre>
-            </div>
-
-            <div class="detailed">
-                <h3>Clone the template</h3>
-                <p>This copies the project to your computer.</p>
-                <pre><code>git clone https://github.com/Luki3532/web-workshop-starter.git my-site</code></pre>
-
-                <h3>Install dependencies</h3>
-                <p>Downloads the build tools (Vite, TypeScript) into <code>node_modules</code>.</p>
-                <pre><code>cd my-site
-npm install</code></pre>
-
-                <h3>Start the dev server</h3>
-                <p>Opens your site at <a href="http://localhost:3000" target="_blank" rel="noopener">localhost:3000</a> with live reload.</p>
-                <pre><code>npm run dev</code></pre>
-
-                <h3>Project files</h3>
-                <table>
-                    <tr><td><code>index.html</code></td><td>Content and structure</td></tr>
-                    <tr><td><code>styles.css</code></td><td>Colors, layout, typography</td></tr>
-                    <tr><td><code>script.ts</code></td><td>Interactivity</td></tr>
-                </table>
-
-                <h3>Starter templates</h3>
-                <p>Download a blank HTML template to get started. Just fill in your info—no CSS or JS needed.</p>
-                <table>
-                    <tr>
-                        <td><a href="templates/basic-portfolio.html" download>📄 Basic Portfolio</a></td>
-                        <td>About, skills, projects, and contact sections</td>
-                    </tr>
-                    <tr>
-                        <td><a href="templates/resume-page.html" download>📄 Resume Page</a></td>
-                        <td>Professional resume layout with experience & education</td>
-                    </tr>
-                    <tr>
-                        <td><a href="templates/minimal-landing.html" download>📄 Minimal Landing</a></td>
-                        <td>Simple one-page intro with social links</td>
-                    </tr>
-                    <tr>
-                        <td><a href="templates/blog-style.html" download>📄 Blog Style</a></td>
-                        <td>Post listing layout for a personal blog</td>
-                    </tr>
-                    <tr>
-                        <td><a href="templates/academic-profile.html" download>📄 Academic Profile</a></td>
-                        <td>Research, publications, and teaching sections</td>
-                    </tr>
-                </table>
-            </div>
+                    <p>This gives you live preview at <code>http://localhost:5173</code></p>
+                </div>
+            </details>
         </section>
 
-        <section id="github">
+        <!-- ============================================
+             STEP 2: EDIT
+             ============================================ -->
+        <section id="step2">
             <div class="section-header">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
-                    <path d="M9 18c-4.51 2-5-2-7-2"/>
-                </svg>
-                <h2>GitHub</h2>
+                <span class="step-number">2</span>
+                <h2>Edit Your Information</h2>
             </div>
 
-            <div class="quick">
-                <span class="label">Quick version</span>
-                <p>Create a repo at <a href="https://github.com/new" target="_blank" rel="noopener">github.com/new</a>, then:</p>
-                <pre><code>git remote set-url origin https://github.com/YOU/YOUR-REPO.git
-git add .
-git commit -m "Initial commit"
-git push -u origin main</code></pre>
-            </div>
+            <div class="step-content">
+                <div class="action-box">
+                    <h3>Open <code>starter.html</code> in any text editor</h3>
+                    <p>We recommend <a href="https://code.visualstudio.com" target="_blank">VS Code</a> (free), but Notepad works too!</p>
+                </div>
 
-            <div class="detailed">
-                <h3>Create a repository</h3>
-                <ol>
-                    <li>Go to <a href="https://github.com/new" target="_blank" rel="noopener">github.com/new</a></li>
-                    <li>Name it (e.g., <code>my-site</code>)</li>
-                    <li>Leave "Add a README" unchecked</li>
-                    <li>Click Create repository</li>
-                </ol>
+                <div class="instructions">
+                    <h3>Find and replace these things:</h3>
+                    <table class="edit-table">
+                        <tr>
+                            <td class="find">Your Name</td>
+                            <td class="replace">→ Your actual name</td>
+                        </tr>
+                        <tr>
+                            <td class="find">your.email@example.com</td>
+                            <td class="replace">→ Your email address</td>
+                        </tr>
+                        <tr>
+                            <td class="find">yourusername</td>
+                            <td class="replace">→ Your GitHub/social username</td>
+                        </tr>
+                        <tr>
+                            <td class="find">Skill 1, Skill 2...</td>
+                            <td class="replace">→ Your actual skills</td>
+                        </tr>
+                        <tr>
+                            <td class="find">Project Name</td>
+                            <td class="replace">→ Names of projects you've done</td>
+                        </tr>
+                    </table>
 
-                <h3>Connect your local project</h3>
-                <p>Point your project to your new repo instead of the template.</p>
-                <pre><code>git remote set-url origin https://github.com/YOU/YOUR-REPO.git</code></pre>
-
-                <h3>Push your code</h3>
-                <pre><code>git add .
-git commit -m "Initial commit"
-git push -u origin main</code></pre>
-
-                <h3>Future updates</h3>
-                <p>After making changes:</p>
-                <pre><code>git add .
-git commit -m "Describe what changed"
-git push</code></pre>
-            </div>
-        </section>
-
-        <section id="deploy">
-            <div class="section-header">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                </svg>
-                <h2>Deploy</h2>
-            </div>
-
-            <div class="quick">
-                <span class="label">Quick version</span>
-                <p><a href="https://dash.cloudflare.com" target="_blank" rel="noopener">Cloudflare Dashboard</a> → Workers & Pages → Create → Pages → Connect to Git → Select repo → Build command: <code>npm run build</code> → Output: <code>dist</code> → Deploy</p>
-            </div>
-
-            <div class="detailed">
-                <h3>Connect Cloudflare to GitHub</h3>
-                <ol>
-                    <li>Open <a href="https://dash.cloudflare.com" target="_blank" rel="noopener">dash.cloudflare.com</a></li>
-                    <li>Go to Workers & Pages</li>
-                    <li>Click Create → Pages → Connect to Git</li>
-                    <li>Authorize GitHub access</li>
-                    <li>Select your repository</li>
-                </ol>
-
-                <h3>Build settings</h3>
-                <table>
-                    <tr><td>Build command</td><td><code>npm run build</code></td></tr>
-                    <tr><td>Output directory</td><td><code>dist</code></td></tr>
-                </table>
-
-                <h3>How it works</h3>
-                <div class="flow">
-                    <div class="flow-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
-                        <span>Push to GitHub</span>
-                    </div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
-                        <span>Cloudflare builds</span>
-                    </div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                        <span>Site goes live</span>
+                    <div class="tip-box">
+                        <strong>💡 Tip:</strong> Use Ctrl+H (or Cmd+H on Mac) to Find & Replace quickly!
                     </div>
                 </div>
-                <p class="note">Your site will be at <code>your-project.pages.dev</code></p>
+
+                <div class="instructions">
+                    <h3>Want to change colors?</h3>
+                    <p>Open <code>starter.css</code> and look at the top. You'll see:</p>
+                    <pre><code>--main-color: #3b82f6;  /* Change this! */</code></pre>
+                    <p>Try these colors:</p>
+                    <div class="color-swatches">
+                        <span class="swatch" style="background: #3b82f6">#3b82f6</span>
+                        <span class="swatch" style="background: #10b981">#10b981</span>
+                        <span class="swatch" style="background: #8b5cf6">#8b5cf6</span>
+                        <span class="swatch" style="background: #f59e0b">#f59e0b</span>
+                        <span class="swatch" style="background: #ef4444">#ef4444</span>
+                    </div>
+                </div>
+
+                <div class="instructions">
+                    <h3>Preview your changes</h3>
+                    <p>Just double-click <code>starter.html</code> to open it in your web browser!</p>
+                </div>
             </div>
+
+            <details class="advanced">
+                <summary>🔧 Advanced: Live Preview with Auto-Reload</summary>
+                <div class="advanced-content">
+                    <p>For automatic reloading when you save, install Node.js and run:</p>
+                    <pre><code>npm install
+npm run dev</code></pre>
+                    <p>Your browser will refresh automatically every time you save a file.</p>
+                </div>
+            </details>
         </section>
 
-        <section id="help">
+        <!-- ============================================
+             STEP 3: PUBLISH
+             ============================================ -->
+        <section id="step3">
             <div class="section-header">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/>
-                </svg>
-                <h2>Troubleshooting</h2>
+                <span class="step-number">3</span>
+                <h2>Publish to the Internet</h2>
             </div>
 
-            <div class="detailed">
-                <h3>"npm not found"</h3>
-                <p>Node.js isn't installed. Download from <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> and restart your terminal.</p>
+            <div class="step-content">
+                <div class="sub-step">
+                    <h3>3A. Create a GitHub Account</h3>
+                    <ol class="big-steps">
+                        <li>
+                            <strong>Go to <a href="https://github.com/signup" target="_blank">github.com/signup</a></strong>
+                            <p>Create a free account (you'll use this username for your site)</p>
+                        </li>
+                    </ol>
+                </div>
 
-                <h3>"git not found"</h3>
-                <p>Install Git from <a href="https://git-scm.com" target="_blank" rel="noopener">git-scm.com</a></p>
+                <div class="sub-step">
+                    <h3>3B. Upload Your Files to GitHub</h3>
+                    <ol class="big-steps">
+                        <li>
+                            <strong>Go to <a href="https://github.com/new" target="_blank">github.com/new</a></strong>
+                            <p>Create a new repository (name it anything, like <code>my-website</code>)</p>
+                        </li>
+                        <li>
+                            <strong>Click "uploading an existing file"</strong>
+                            <p>Look for this link on the new repository page</p>
+                        </li>
+                        <li>
+                            <strong>Drag all your files into the upload area</strong>
+                            <p>Include: <code>starter.html</code>, <code>starter.css</code>, and any other files</p>
+                        </li>
+                        <li>
+                            <strong>Rename your files first!</strong>
+                            <p>Before uploading, rename <code>starter.html</code> → <code>index.html</code> and <code>starter.css</code> → <code>styles.css</code></p>
+                        </li>
+                        <li>
+                            <strong>Click "Commit changes"</strong>
+                            <p>Your files are now saved online!</p>
+                        </li>
+                    </ol>
+                </div>
 
-                <h3>Build fails on Cloudflare</h3>
-                <p>Check build logs. Usually it's a wrong build command or output directory.</p>
+                <div class="sub-step">
+                    <h3>3C. Connect to Cloudflare Pages</h3>
+                    <ol class="big-steps">
+                        <li>
+                            <strong>Go to <a href="https://dash.cloudflare.com/sign-up" target="_blank">Cloudflare</a> and create a free account</strong>
+                        </li>
+                        <li>
+                            <strong>Click "Workers & Pages" in the sidebar</strong>
+                        </li>
+                        <li>
+                            <strong>Click "Create" → "Pages" → "Connect to Git"</strong>
+                        </li>
+                        <li>
+                            <strong>Sign in to GitHub and select your repository</strong>
+                        </li>
+                        <li>
+                            <strong>Set these build settings:</strong>
+                            <table class="settings-table">
+                                <tr><td>Build command</td><td><code>npm run build</code></td></tr>
+                                <tr><td>Build output directory</td><td><code>dist</code></td></tr>
+                            </table>
+                        </li>
+                        <li>
+                            <strong>Click "Save and Deploy"</strong>
+                        </li>
+                    </ol>
+                </div>
 
-                <h3>Changes not showing</h3>
-                <p>Make sure you pushed: <code>git add . && git commit -m "update" && git push</code></p>
+                <div class="success-box">
+                    <h3>🎉 You're Live!</h3>
+                    <p>Your website will be available at:<br>
+                    <code>https://your-project-name.pages.dev</code></p>
+                    <p>Every time you update files on GitHub, your site updates automatically!</p>
+                </div>
+            </div>
+
+            <details class="advanced">
+                <summary>🔧 Advanced: Deploy with Terminal</summary>
+                <div class="advanced-content">
+                    <p>After setting up Git:</p>
+                    <pre><code>git add .
+git commit -m "Update my website"
+git push</code></pre>
+                    <p>Cloudflare will automatically rebuild and deploy your site.</p>
+                </div>
+            </details>
+        </section>
+
+        <!-- ============================================
+             HELP SECTION
+             ============================================ -->
+        <section id="help">
+            <div class="section-header">
+                <span class="step-number">?</span>
+                <h2>Need Help?</h2>
+            </div>
+
+            <div class="step-content">
+                <div class="faq">
+                    <h3>My changes aren't showing up</h3>
+                    <p>Make sure you saved the file (Ctrl+S / Cmd+S), then refresh the browser (F5).</p>
+
+                    <h3>The site looks broken</h3>
+                    <p>Make sure you renamed <code>starter.css</code> to <code>styles.css</code> — the HTML file looks for <code>styles.css</code>!</p>
+
+                    <h3>I can't find my files</h3>
+                    <p>Check your Downloads folder. The ZIP file extracts to a folder called <code>web-workshop-starter-main</code>.</p>
+
+                    <h3>Cloudflare build failed</h3>
+                    <p>Make sure build command is exactly <code>npm run build</code> and output directory is <code>dist</code>.</p>
+                </div>
+
+                <div class="resources">
+                    <h3>Helpful Resources</h3>
+                    <ul>
+                        <li><a href="https://coolors.co" target="_blank">Coolors</a> — Generate color palettes</li>
+                        <li><a href="https://unsplash.com" target="_blank">Unsplash</a> — Free photos</li>
+                        <li><a href="https://fonts.google.com" target="_blank">Google Fonts</a> — Free fonts</li>
+                        <li><a href="https://heroicons.com" target="_blank">Heroicons</a> — Free icons</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>Questions? Ask the workshop facilitator.</p>
+        <p>Questions? Raise your hand and ask the workshop facilitator!</p>
     </footer>
 
     <script type="module" src="/script.ts"></script>

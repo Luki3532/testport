@@ -1,101 +1,97 @@
-# Quick Start Guide
+﻿# Quick Start Guide
 
-**Time needed: 15 minutes**
-
-## Step 1: Get the Files (2 min)
-
-```bash
-git clone https://github.com/Luki3532/web-workshop-starter.git my-website
-cd my-website
-npm install
-```
-
-## Step 2: Start Editing (1 min)
-
-```bash
-npm run dev
-```
-
-Your site opens at http://localhost:5173
-
-## Step 3: Replace the Files (2 min)
-
-1. **Delete** `index.html`
-2. **Rename** `starter.html` → `index.html`
-3. **Delete** `styles.css`  
-4. **Rename** `starter.css` → `styles.css`
-
-Your page will auto-reload with the new template!
-
-## Step 4: Edit Your Info (10 min)
-
-Open `index.html` and find the comments that say **STEP 1**, **STEP 2**, etc.
-
-| Step | What to Change |
-|------|----------------|
-| 1 | Page title (browser tab) |
-| 2 | Your name and tagline |
-| 3 | About Me paragraph |
-| 4 | Your skills |
-| 5 | Your projects |
-| 6 | Contact links |
-| 7 | Footer year/name |
-
-**Save the file** → Page updates automatically!
-
-## Step 5: Change Colors (Optional)
-
-Open `styles.css` and find the `:root` section at the top:
-
-```css
-:root {
-    --main-color: #3b82f6;  /* Change this! */
-}
-```
-
-Try these colors:
-- `#10b981` - Green
-- `#8b5cf6` - Purple  
-- `#f59e0b` - Orange
-- `#ef4444` - Red
-- `#06b6d4` - Cyan
-
-## Step 6: Deploy to the Internet
-
-```bash
-git add .
-git commit -m "My personal website"
-git push
-```
-
-If connected to Cloudflare, your site goes live automatically!
+**No coding experience needed!** Follow these steps to build your website.
 
 ---
 
-## Common Questions
+## Step 1: Download (2 minutes)
 
-**Q: How do I add more projects?**
-Copy an `<article class="project">` block and paste it below the others.
+1. **[Download the ZIP file](https://github.com/Luki3532/web-workshop-starter/archive/refs/heads/main.zip)**
 
-**Q: How do I add an image?**
-```html
-<img src="photo.jpg" alt="Description">
-```
-Put the image file in your project folder.
+2. **Find it** in your Downloads folder (`web-workshop-starter-main.zip`)
 
-**Q: How do I change fonts?**
-Add this inside `<head>` in your HTML:
-```html
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-```
-Then in CSS:
+3. **Unzip it** - double-click the file (or right-click  Extract All on Windows)
+
+---
+
+## Step 2: Edit Your Info (10 minutes)
+
+### Replace the files:
+1. **Delete** `index.html` (the tutorial page)
+2. **Delete** `styles.css` (the tutorial styling)
+3. **Rename** `starter.html`  `index.html`
+4. **Rename** `starter.css`  `styles.css`
+
+### Edit your information:
+1. **Open** `index.html` in any text editor (VS Code, Notepad, etc.)
+
+2. **Find and replace** these placeholders:
+
+| Find this | Replace with |
+|-----------|--------------|
+| `Your Name` | Your actual name |
+| `your.email@example.com` | Your email |
+| `yourusername` | Your GitHub/social username |
+| `Skill 1`, `Skill 2`... | Your skills |
+| `Project Name` | Your projects |
+
+**Tip:** Use Ctrl+H (Cmd+H on Mac) for Find & Replace!
+
+### Preview your changes:
+Just double-click `index.html` to open it in your browser!
+
+---
+
+## Step 3: Change Colors (Optional)
+
+Open `styles.css` and change the color at the top:
+
 ```css
-body {
-    font-family: 'Inter', sans-serif;
-}
+--main-color: #3b82f6;
 ```
 
-**Q: My changes aren't showing?**
-- Save the file (Ctrl+S / Cmd+S)
-- Check the terminal for errors
-- Try refreshing the page (F5)
+Try these:
+- `#10b981` - Green
+- `#8b5cf6` - Purple
+- `#f59e0b` - Orange
+- `#ef4444` - Red
+
+---
+
+## Step 4: Publish Online (10 minutes)
+
+### Create accounts (both free):
+1. **GitHub** - [github.com/signup](https://github.com/signup)
+2. **Cloudflare** - [dash.cloudflare.com/sign-up](https://dash.cloudflare.com/sign-up)
+
+### Upload to GitHub:
+1. Go to [github.com/new](https://github.com/new) and create a repository
+2. Click **"uploading an existing file"**
+3. Drag your files into the upload area
+4. Click **"Commit changes"**
+
+### Connect to Cloudflare:
+1. Go to Cloudflare  **Workers & Pages**  **Create**  **Pages**
+2. Click **"Connect to Git"** and select your repository
+3. Set **Build command**: `npm run build`
+4. Set **Build output**: `dist`
+5. Click **Save and Deploy**
+
+---
+
+##  Done!
+
+Your site is live at: `https://your-project.pages.dev`
+
+---
+
+## Troubleshooting
+
+**Site looks broken?**
+Make sure you renamed `starter.css` to `styles.css`
+
+**Changes not showing?**
+Save the file (Ctrl+S) and refresh your browser (F5)
+
+**Cloudflare build failed?**
+Check that build command is exactly `npm run build` and output is `dist`
